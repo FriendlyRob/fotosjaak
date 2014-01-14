@@ -1,6 +1,18 @@
 <?php 
 	$userrole = array('customer', 'root', 'admin');
 	include("security.php"); 
+	
+	if ( isset($_POST['submit']))
+	{
+		//var_dump($_POST);	
+		echo "Uw geplaatste opdracht is correct ontvangen. U krijgt een<br>
+			  bewestigingsemail toegestuurt. U wordt doorgestuur naar de<br>
+			  homepage";
+		header("refresh:6;index.php?content=customer_homepage");	  	
+	}
+	else 
+	{	
+	
 ?>
 <p>Plaats een opdracht</p>
 
@@ -41,13 +53,35 @@
 				<input type='date' name='eventdate' placeholder='dd-mm-yyyy' />
 			</td>			
 		</tr>
+		<tr>
+			<td>
+				Zwart/wit of kleur
+			</td>
+			<td>
+				Kleur		<input type='radio' 
+					   		name='color' 
+					   		value='color' 
+					   		checked='checked'/>
+				Zwart/wit	<input type='radio' 
+					   		name='color' 
+					   		value='black-white' />
+			</td>			
+		</tr>
+		<tr>
+			<td>Aantal foto's</td>
+			<td>
+				<input type='number' name='number_of_pictures' min='10' value="10"/>				
+			</td>
+		</tr>	
+		<tr>
+			<td>&nbsp;</td>
+			<td>
+				<input type='submit' name='submit' value="verstuur" />
+			</td>	
+		</tr>
 		
-		
-		
-		
-		
-	</table>
-	
-	
-	
+	</table>	
 </form>
+<?php
+}
+?>

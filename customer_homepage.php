@@ -3,5 +3,5 @@
 	include("security.php"); 
 ?>
 <h3>Customer homepage</h3>
-Welkom klant nummer  <?php echo $_SESSION['id']; ?> <br>
-U bent ingelogt als een:  <?php echo $_SESSION['userrole']; ?>
+Uw id is: <?php echo $_SESSION['id']; ?><br>
+Uw gebruikersrol is: <?php echo $_SESSION['userrole']; ?>

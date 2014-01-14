@@ -1,32 +1,32 @@
-<table class='simple'> 
+<table class='simple'>
 	<caption>Downloads</caption>
 	<tr>
 		<th>screenshot</th>
 		<th>spelnaam</th>
 		<th>download game</th>
-		<th>download manual</th>
-	</tr>	
+		<th>download manual</th>	
+	</tr>
 	<tr>
 		<td>
 			<img src='./images/prtscGame.png' 
-				 art='printscreen game' 
-				 width="200" 
-				  />
+				 alt='printscreen game'
+				 width='200' />
 		</td>
 		<td>
-			Evilbabys
+			EvilBabies
 		</td>
 		<td>
-			<a href='./downloads/EvilBabys.rar'>
-			<img src='./images/downloadArrow.jpg' alt='download game' />
+			<a href='./downloads/EvilBabies.zip'>
+				<img src='./images/download.png' alt='download game' />
 			</a>
 		</td>
 		<td>
-			<a href='./downloads/HandleidingEngels.odt'>
-			<img src='./images/engelsFlag.png' alt='download manual ned' />
-			&nbsp;
-			<a href='./downloads/HandleidingNederlands.odt'>
-			<img src='./images/nederlandFlag.png' alt='download manual eng' />
+			<a href='./downloads/HandleidingNed.doc'>
+				<img src='./images/ned_vlag.png' alt='download manual ned' />
+			</a>
+			<a href='./downloads/ManualEng.doc'>
+				<img src='./images/eng_vlag.png' alt='download manual eng' />
+			</a>
 		</td>
 	</tr>
 </table>

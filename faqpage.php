@@ -1,4 +1,4 @@
-<?php
+<?php 
 	if (!isset($_GET['language']))
 	{
 		$_GET['language'] = 'dutch';
@@ -13,13 +13,13 @@
 
 <table class='simple'>
 	<caption>
-			Faq pagina
-			<a href='index.php?content=faqpage&language=english'>
-				<img src='./images/engelsFlag.png'' alt=''/>
-			</a>
-			<a href='index.php?content=faqpage&language=dutch'>
-				<img src='./images/nederlandFlag.png' alt=''/>
-			</a>
+		Faq pagina
+		<a href='index.php?content=faqpage&language=english'>
+			<img src='./images/eng_vlag.png' alt='' />
+		</a>
+		<a href='index.php?content=faqpage&language=dutch'>
+			<img src='./images/ned_vlag.png' alt='' />
+		</a>
 	</caption>
 	<tr>
 		<th>
@@ -30,40 +30,40 @@
 		</th>
 		<th>
 			antwoord
-		</th>
+		</th>	
 	</tr>
 <?php
-	while ($record = mysql_fetch_array($result))
-	{
-		echo "<tr>
-				<td>
-					".$record['id']."
-				</td>	
-				<td>
-					";
-					if($_GET['language'] == 'english')
-					{
-						echo $record['question_english'];
-					}
-					else
-					{
-						echo $record['question_dutch'];
-					}
-					echo "
-				</td>
-				<td>
-					";
-					if($_GET['language'] == 'english')
-					{
-						echo $record['answer_english'];
-					}
-					else
-					{
-						echo $record['answer_dutch'];
-					}
-					echo "
-				</td>
-			</tr>";
-	}
+while ( $record = mysql_fetch_array($result))
+{
+	echo "<tr>
+			<td>
+				".$record['id']."
+			</td>
+			<td>
+				";
+			if ($_GET['language'] == 'english')
+			{
+				echo $record['question_english'];
+			}
+			else
+			{
+				echo $record['question_dutch'];
+			}
+			echo "
+			</td>
+			<td>
+				";
+			if ($_GET['language'] == 'english')
+			{
+				echo $record['answer_english'];				
+			}
+			else
+			{
+				echo $record['answer_dutch'];
+			}
+			echo "
+			</td>	
+		  </tr>";
+}
 ?>
 </table>

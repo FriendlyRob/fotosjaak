@@ -94,5 +94,15 @@
 		$database->fire_query($query);		
 	}
 	
+	public static function find_firstname_infix_surname()
+	{			
+		$query = "SELECT *
+				  FROM `user`
+				  WHERE `id` = '".$_SESSION['id']."'";
+		$result = self::find_by_sql($query);
+		$user = array_shift($result);
+		return $user;	
+	}
+	
  }
 ?>

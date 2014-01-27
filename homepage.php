@@ -1,1 +1,11 @@
-Dit is mijn eerste html pagina met css. Dit is mijn eerste html pagina met css. Dit is mijn eerste html pagina met css. Dit is mijn eerste html pagina met css. Dit is mijn eerste html pagina met css. . Dit is mijn eerste html pagina met css. Dit is mijn eerste html pagina met css
+<style>
+p
+{
+	//border:1px solid blue;
+	text-align:center;
+	font-size:x-large;
+}
+</style>
+
+<p>FotoSjaak</p>
+

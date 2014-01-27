@@ -252,6 +252,45 @@
 					  	  	 `activationdate`	= '".$date."'
 					  WHERE  `email`			= '".$email."'";
 			$database->fire_query($query);				
-		}											
+		}
+		
+		public static function find_email_password_by_id()
+		{
+			$query = "SELECT *
+					  FROM `login` 
+					  WHERE `id` = '".$_SESSION['id']."'";
+			$login_array = self::find_by_sql($query);
+			$login_object = array_shift($login_array);
+			return $login_object;			
+		}
+		
+		public static function check_if_email_password_matches_md5($email, $password)
+		{
+			global $database;
+			$query = "SELECT * 
+					  FROM `login`
+					  WHERE `email` = '".$email."'";
+			$result = self::find_by_sql($query);
+			
+			$login_object = array_shift($result);
+			// Check of het emailadres bestaat
+			if ( $login_object != null)
+			{
+				// Check of de MD5 hash van het emailadres uit de database
+				// overeen komt met de meegegeven MD5 hash
+				if ( strcmp($password, MD5($login_object->get_password())) == 0)
+				{
+					return true;
+				}
+				else 
+				{
+					return false;
+				}
+			}
+			else 
+			{
+				return false;
+			}
+		}										
 	}
 ?>
